@@ -34,13 +34,7 @@
         "@material-ui/icons": "^4.9.1",
         "@material-ui/lab": "^4.0.0-alpha.56"
     },
-    "dependencies": {
-        "fs-extra": "^9.0.0",
-        "guid-typescript": "^1.0.9",
-        "loglevel": "^1.6.8",
-        "react": "^17.0.1",
-        "react-dom": "^17.0.1"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@babel/core": "*",
         "@babel/plugin-proposal-class-properties": "^7.8.3",
@@ -48,7 +42,7 @@
         "@babel/preset-env": "*",
         "@babel/preset-react": "*",
         "@babel/preset-typescript": "*",
-        "@derfrodo/reducer-gen": "^0.1.13-beta.3",
+        "@derfrodo/reducer-gen": "^0.1.14",
         "@types/fs-extra": "^8.1.0",
         "@types/jest": "^25.2.1",
         "@typescript-eslint/eslint-plugin": "^2.26.0",
@@ -57,6 +51,7 @@
         "eslint": "^6.8.0",
         "eslint-config-prettier": "^6.10.1",
         "eslint-plugin-prettier": "^3.1.2",
+        "fs-extra": "^9.0.0",
         "jest": "*",
         "prettier": "^2.0.2",
         "typescript": "^3.8.3"

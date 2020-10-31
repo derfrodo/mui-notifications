@@ -8,7 +8,7 @@ import { SnackbarData } from "../../interfaces/SnackbarData";
  * You may add here extending reducer actions for this features reducer
  */
 
-export type AppReducerActionsExtended = { type: extenededActions } & (
+export type SnackbarReducerActionsExtended = { type: extenededActions } & (
   | {
       type: extenededActions.ADD_SNACKBAR_DATA;
       next: SnackbarData;
@@ -35,9 +35,9 @@ export type AppReducerActionsExtended = { type: extenededActions } & (
     }
 );
 
-export const isAppReducerActionsExtended = (
+export const isSnackbarReducerActionsExtended = (
   item: any
-): item is AppReducerActionsExtended => {
+): item is SnackbarReducerActionsExtended => {
   if (!item) {
     return false;
   }
@@ -49,4 +49,4 @@ export const isAppReducerActionsExtended = (
   return false;
 };
 
-export default AppReducerActionsExtended;
+export default SnackbarReducerActionsExtended;

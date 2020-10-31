@@ -1,10 +1,10 @@
 import { Snackbar } from "@material-ui/core";
 import { Alert, AlertTitle } from "@material-ui/lab";
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import { SNACKBAR_TYPES } from "../../App/interfaces/SnackbarData";
+import { SNACKBAR_TYPES } from "../interfaces/SnackbarData";
 import { snackbarActionCreators, useSnackbarReducerContext } from "../reducer";
 
-export const StateBoundSnackBar = () => {
+export const StateBoundSnackBar: React.FC = () => {
     const { state, dispatch } = useSnackbarReducerContext();
     const { snackbarDatas } = state;
 

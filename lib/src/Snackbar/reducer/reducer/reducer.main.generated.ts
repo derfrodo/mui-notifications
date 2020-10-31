@@ -4,11 +4,11 @@
 import snackbarReducerBase from "./reducer.base.generated";
 import snackbarReducerExtended from "./reducer.extended";
 import { isSnackbarReducerActionsBase } from "./../reducerActions/reducerActions.base.generated";
-import IState from "./../state";
+import State from "./../state";
 import getDefaultState from "./../defaultState.base.generated";
 import SnackbarReducerActions from "./../reducerActions/reducerActions.main.generated";
         
-export const snackbarReducer = (state: IState = getDefaultState(), action:  SnackbarReducerActions): IState => {
+export const snackbarReducer = (state: State = getDefaultState(), action:  SnackbarReducerActions): State => {
     // Note: Generator may be extended to inversify this order => Just talk to me ;)
     // return snackbarReducerExtended((isSnackbarReducerActionsBase(action) ? snackbarReducerBase(state, action) : state), action);
     

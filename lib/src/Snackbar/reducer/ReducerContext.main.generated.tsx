@@ -2,19 +2,19 @@
 // DO NOT Change anything inside this file. Every time the generator is used, it will be overwritten.
 
 import React from "react";
-import IState from "./state";
+import State from "./state";
 import snackbarReducer from "./reducer/reducer.main.generated";
 import SnackbarReducerActions from "./reducerActions/reducerActions.main.generated";
 import getSnackbarDefaultState from "./defaultState.base.generated";
 
 export interface ISnackbarReducerContext {
-    state: IState;
+    state: State;
     dispatch: React.Dispatch<SnackbarReducerActions>;
 }
 
 export type IDispatchSnackbarReducerContext = React.Dispatch<SnackbarReducerActions>;
 
-export type IStateSnackbarReducerContext = IState;
+export type IStateSnackbarReducerContext = State;
 
 export const SnackbarReducerContext = React.createContext<ISnackbarReducerContext>({
     state: getSnackbarDefaultState(),
@@ -37,7 +37,7 @@ export const SnackbarReducerContextProvider = (props: {
     );
 
     const context: {
-    state: IState;
+    state: State;
     dispatch: React.Dispatch<SnackbarReducerActions>;
     } = React.useMemo(() => ({ state, dispatch }), [state, dispatch]);
 

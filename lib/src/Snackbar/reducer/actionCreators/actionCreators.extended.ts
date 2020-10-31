@@ -2,7 +2,7 @@
 
 // import { APP_STATES } from "../../interfaces/APP_STATES";
 import ExtenedReducerAction, {
-  AppReducerActionsExtended,
+  SnackbarReducerActionsExtended,
 } from "./../reducerActions/reducerActions.extended";
 import { SnackbarData } from "../../interfaces/SnackbarData";
 import extendedActions from "./../actions/action.extended";
@@ -17,22 +17,22 @@ import extendedActions from "./../actions/action.extended";
  *
  */
 export const extendedActionCreators = {
-  addSnackbarData: (next: SnackbarData): AppReducerActionsExtended => {
+  addSnackbarData: (next: SnackbarData): SnackbarReducerActionsExtended => {
     return { type: extendedActions.ADD_SNACKBAR_DATA, next };
   },
-  removeSnackbarData: (next: SnackbarData): AppReducerActionsExtended => {
+  removeSnackbarData: (next: SnackbarData): SnackbarReducerActionsExtended => {
     return { type: extendedActions.REMOVE_SNACKBAR_DATA, next };
   },
-  addLoading: (next: symbol): AppReducerActionsExtended => {
+  addLoading: (next: symbol): SnackbarReducerActionsExtended => {
     return { type: extendedActions.ADD_LOADING, next };
   },
-  removeLoading: (next: symbol): AppReducerActionsExtended => {
+  removeLoading: (next: symbol): SnackbarReducerActionsExtended => {
     return { type: extendedActions.REMOVE_LOADING, next };
   },
-  addGlobalLoading: (next: symbol): AppReducerActionsExtended => {
+  addGlobalLoading: (next: symbol): SnackbarReducerActionsExtended => {
     return { type: extendedActions.ADD_GLOBAL_LOADING, next };
   },
-  removeGlobalLoading: (next: symbol): AppReducerActionsExtended => {
+  removeGlobalLoading: (next: symbol): SnackbarReducerActionsExtended => {
     return { type: extendedActions.REMOVE_GLOBAL_LOADING, next };
   },
 };

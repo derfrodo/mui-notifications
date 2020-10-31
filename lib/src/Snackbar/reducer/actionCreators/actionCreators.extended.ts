@@ -2,7 +2,7 @@
 
 // import { APP_STATES } from "../../interfaces/APP_STATES";
 import ExtenedReducerAction, {
-  SnackbarReducerActionsExtended,
+    SnackbarReducerActionsExtended,
 } from "./../reducerActions/reducerActions.extended";
 import { SnackbarData } from "../../interfaces/SnackbarData";
 import extendedActions from "./../actions/action.extended";
@@ -17,38 +17,28 @@ import extendedActions from "./../actions/action.extended";
  *
  */
 export const extendedActionCreators = {
-  addSnackbarData: (next: SnackbarData): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.ADD_SNACKBAR_DATA, next };
-  },
-  removeSnackbarData: (next: SnackbarData): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.REMOVE_SNACKBAR_DATA, next };
-  },
-  addLoading: (next: symbol): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.ADD_LOADING, next };
-  },
-  removeLoading: (next: symbol): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.REMOVE_LOADING, next };
-  },
-  addGlobalLoading: (next: symbol): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.ADD_GLOBAL_LOADING, next };
-  },
-  removeGlobalLoading: (next: symbol): SnackbarReducerActionsExtended => {
-    return { type: extendedActions.REMOVE_GLOBAL_LOADING, next };
-  },
+    addSnackbarData: (next: SnackbarData): SnackbarReducerActionsExtended => {
+        return { type: extendedActions.ADD_SNACKBAR_DATA, next };
+    },
+    removeSnackbarData: (
+        next: SnackbarData
+    ): SnackbarReducerActionsExtended => {
+        return { type: extendedActions.REMOVE_SNACKBAR_DATA, next };
+    },
 };
 
 type ActionCreator = {
-  [key in string]: (...params: any[]) => ExtenedReducerAction;
+    [key in string]: (...params: any[]) => ExtenedReducerAction;
 };
 
 const checkActionCreator: <T>(item: T & ActionCreator) => T = <T>(
-  item: T & ActionCreator
+    item: T & ActionCreator
 ) => {
-  return item;
+    return item;
 };
 
 export const appActionCreatorsExtended = checkActionCreator(
-  extendedActionCreators
+    extendedActionCreators
 );
 
 export default appActionCreatorsExtended;

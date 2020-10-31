@@ -9,44 +9,30 @@ import { SnackbarData } from "../../interfaces/SnackbarData";
  */
 
 export type SnackbarReducerActionsExtended = { type: extenededActions } & (
-  | {
-      type: extenededActions.ADD_SNACKBAR_DATA;
-      next: SnackbarData;
-    }
-  | {
-      type: extenededActions.REMOVE_SNACKBAR_DATA;
-      next: SnackbarData;
-    }
-  | {
-      type: extenededActions.ADD_LOADING;
-      next: symbol;
-    }
-  | {
-      type: extenededActions.ADD_GLOBAL_LOADING;
-      next: symbol;
-    }
-  | {
-      type: extenededActions.REMOVE_GLOBAL_LOADING;
-      next: symbol;
-    }
-  | {
-      type: extenededActions.REMOVE_LOADING;
-      next: symbol;
-    }
+    | {
+          type: extenededActions.ADD_SNACKBAR_DATA;
+          next: SnackbarData;
+      }
+    | {
+          type: extenededActions.REMOVE_SNACKBAR_DATA;
+          next: SnackbarData;
+      }
 );
 
 export const isSnackbarReducerActionsExtended = (
-  item: any
+    item: any
 ): item is SnackbarReducerActionsExtended => {
-  if (!item) {
-    return false;
-  }
-  if (typeof item === "object") {
-    const { type } = item;
+    if (!item) {
+        return false;
+    }
+    if (typeof item === "object") {
+        const { type } = item;
 
-    return typeof type === "string" && extenededActions.hasOwnProperty(type);
-  }
-  return false;
+        return (
+            typeof type === "string" && extenededActions.hasOwnProperty(type)
+        );
+    }
+    return false;
 };
 
 export default SnackbarReducerActionsExtended;

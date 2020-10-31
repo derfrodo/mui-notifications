@@ -22,7 +22,7 @@
         "prepublish:public": "npm run prepareForPublish",
         "publish:beta": "npm publish --access public --tag beta",
         "publish:public": "npm publish --access public",
-        "installPeerDependencies":"npm i @types/react @types/react-dom react react-dom @material-ui/core @material-ui/lab"
+        "installPeerDependencies": "npm i @types/react @types/react-dom react react-dom @material-ui/core @material-ui/lab"
     },
     "private": false,
     "author": "Stefan Pauka",
@@ -36,6 +36,8 @@
     "dependencies": {
         "@material-ui/core": "^4.11.0",
         "@material-ui/lab": "^4.0.0-alpha.56",
+        "@types/react": "^16.9.55",
+        "@types/react-dom": "^16.9.9",
         "fs-extra": "^9.0.0",
         "guid-typescript": "^1.0.9",
         "loglevel": "^1.6.8",

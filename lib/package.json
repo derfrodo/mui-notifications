@@ -34,6 +34,23 @@
         "@material-ui/icons": "^4.9.1",
         "@material-ui/lab": "^4.0.0-alpha.56"
     },
+    "peerDependenciesMeta": {
+        "@types/react": {
+            "optional": true
+        },
+        "@types/react-dom": {
+            "optional": true
+        },
+        "@material-ui/core": {
+            "optional": true
+        },
+        "@material-ui/icons": {
+            "optional": true
+        },
+        "@material-ui/lab": {
+            "optional": true
+        }
+    },
     "dependencies": {},
     "devDependencies": {
         "@babel/core": "*",

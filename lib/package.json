@@ -22,7 +22,7 @@
         "prepublish:public": "npm run prepareForPublish",
         "publish:beta": "npm publish --access public --tag beta",
         "publish:public": "npm publish --access public",
-        "installPeerDependencies": "npm i --no-save @material-ui/icons react react-dom @material-ui/core @material-ui/lab"
+        "installPeerDependencies": "npm i --no-save  react react-dom react-test-renderer @material-ui/icons @material-ui/core @material-ui/lab"
     },
     "private": false,
     "author": "Stefan Pauka",

@@ -11,12 +11,13 @@ import {
     makeStyles,
     Typography,
     useTheme,
+    Theme,
 } from "@material-ui/core";
 import { Clear, Error, Help, Info, Warning } from "@material-ui/icons";
 import React, { useMemo } from "react";
 import ConfirmData, { ConfirmTypes } from "./../interfaces/ConfirmData";
 
-const useConfirmStyles = makeStyles((t) =>
+const useConfirmStyles = makeStyles((t: any) =>
     createStyles({
         dialogRoot: {
             minWidth: 300,

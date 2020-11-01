@@ -4,7 +4,6 @@ import {
     snackbarActionCreators,
     useSnackbarReducerContextDispatch,
 } from "./reducer";
-
 export const useAddSnackbar = () => {
     const dispatch = useSnackbarReducerContextDispatch();
 

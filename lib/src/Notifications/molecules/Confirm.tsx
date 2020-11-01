@@ -118,6 +118,7 @@ export const Confirm: React.FC<{ confirmData?: ConfirmData }> = ({
             classes={{
                 paper: classes.dialogRoot,
             }}
+            data-testid="confirmDialog"
         >
             <DialogTitle>
                 <Grid

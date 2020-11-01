@@ -4,7 +4,9 @@ import { Confirm } from "./Confirm";
 
 describe("Confirm Component Tests", () => {
     it("renders component", async () => {
-        const { getByTestId } = render(<Confirm />);
+        const { getByTestId } = render(
+            <Confirm confirmData={{ closed: false, message: "Nachricht" }} />
+        );
         await waitFor(
             () => {
                 const hiMessage = getByTestId("confirmDialog");

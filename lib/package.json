@@ -2,7 +2,7 @@
     "name": "@derfrodo/mui-notifications",
     "version": "0.0.1",
     "description": "Awesome things will happen here",
-    "main": "dist/",
+    "main": "dist/index.js",
     "repository": {
         "type": "git",
         "url": "https://github.com/derfrodo/mui-notifications"

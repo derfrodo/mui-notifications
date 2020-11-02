@@ -4,16 +4,24 @@ import { render, waitFor } from "@testing-library/react";
 import { Confirm } from "./Confirm";
 
 describe("Confirm Component Tests", () => {
-    it("renders component", async () => {
+    it("Confirm.renders component", async () => {
         const { getByTestId } = render(
             <Confirm confirmData={{ closed: false, message: "Nachricht" }} />
         );
         await waitFor(
             () => {
-                const hiMessage = getByTestId("confirmDialog");
-                expect(hiMessage).toBeInTheDocument();
+                const element = getByTestId("confirmDialog");
+                expect(element).toBeInTheDocument();
             },
             { timeout: 200 }
         );
+    });
+    it("Confirm.renders nothin if closed", async () => {
+        const { queryByTestId, debug } = render(
+            <Confirm confirmData={{ closed: true, message: "Nachricht" }} />
+        );
+
+        const element = await queryByTestId("confirmDialog");
+        expect(element).toBeNull(); //.toBeInTheDocument();
     });
 });

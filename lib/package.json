@@ -22,6 +22,7 @@
         "prepublish:public": "npm run prepareForPublish",
         "publish:beta": "npm publish --access public --tag beta",
         "publish:public": "npm publish --access public",
+        "postpublish:public": "node addVersionTagInGit",
         "installPeerDependencies": "npm i --no-save  react react-dom react-test-renderer @material-ui/icons @material-ui/core @material-ui/lab"
     },
     "private": false,
